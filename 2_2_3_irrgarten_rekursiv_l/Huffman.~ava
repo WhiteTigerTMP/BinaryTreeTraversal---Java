@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Comparator;
 
 public class Huffman{
@@ -59,15 +60,42 @@ public class Huffman{
     }
     Object[] values = toReturn.values().toArray();
     Arrays.sort(values);
-    System.out.println(Arrays.toString(values));  
+  
+    int[] getValues = new int[values.length];
+    for (int i = 0; i < values.length; i++) {
+      getValues[i] = (int)values[i]; 
+    }
+    char[] getChar = new char[getValues.length] ; 
     
+    HashMap<Character, Integer> sortedMap = new HashMap<Character, Integer>();
     
-              
+    for (int j = 0; j < getValues.length ; j++ ) {
+      getChar[j] = getKey(toReturn,getValues[j]);
+    } // end of for
+    
+    for( int d = 0; d < getValues.length; d++ )
+    {   
+      System.out.println(getChar[d] + " " + getValues[d]);           
+      sortedMap.put(getChar[d], getValues[d]);                                          
+    }
+                               
+    
+    System.out.println(sortedMap);
+    
     return toReturn;    
   }
 
   public void crateNewTree(HashMap<Character, Integer> map){
     
+  }
+  
+  public static <K, V> K getKey(Map<K, V> map, V value) {
+    for (Map.Entry<K, V> entry : map.entrySet()) {
+      if (value.equals(entry.getValue())) {
+        return entry.getKey();
+      }
+    }
+    return null;
   }
   
   class CharOccurances
