@@ -24,20 +24,17 @@ public class IFBaum {
   }
 
   public void ergaenze(String pName, String pDatum) {
-    baum.insert(new Informatiker(pName,pDatum));
+    
   }
 
   public void loesche(String name) {
-    Informatiker inf = new Informatiker(name,"");
-    if (!baum.isEmpty())
-      baum.remove(inf);
+    //ToDo
   }
 
   public BinaryTree<Informatiker> gibBaum() {  
-     
-      return gibBaum(baum);
-      
+    return gibBaum(baum); 
   }
+  
   private BinaryTree<Informatiker> gibBaum(BinarySearchTree<Informatiker> bs){
     BinaryTree<Informatiker> b;
     if(bs.isEmpty())
@@ -60,15 +57,8 @@ public class IFBaum {
   }
 
   public String inorder(BinarySearchTree<Informatiker> b) {
-    String links = "";
-    String mitte = "";
-    String rechts = "";
-    if (!b.isEmpty()) {
-      links = inorder(b.getLeftTree());
-      mitte = b.getContent().toString()+"\n";
-      rechts = inorder(b.getRightTree());
-    }  
-    return links + mitte + rechts;
+    //ToDo
+    return "ToDo";
   }
 
 }

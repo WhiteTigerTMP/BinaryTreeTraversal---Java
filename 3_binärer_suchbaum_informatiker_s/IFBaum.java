@@ -24,7 +24,7 @@ public class IFBaum {
   }
 
   public void ergaenze(String pName, String pDatum) {
-    //ToDo
+    
   }
 
   public void loesche(String name) {
@@ -32,10 +32,9 @@ public class IFBaum {
   }
 
   public BinaryTree<Informatiker> gibBaum() {  
-     
-      return gibBaum(baum);
-      
+    return gibBaum(baum); 
   }
+  
   private BinaryTree<Informatiker> gibBaum(BinarySearchTree<Informatiker> bs){
     BinaryTree<Informatiker> b;
     if(bs.isEmpty())
