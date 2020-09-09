@@ -1,0 +1,24 @@
+object lueckenspielsolver: TFGUIForm
+  Left = 66
+  Top = 66
+  BorderIcons = [biSystemMenu]
+  Caption = 'lueckenspielsolver'
+  ClientHeight = 273
+  ClientWidth = 292
+  Color = clBtnFace
+  ParentFont = True
+  FormStyle = fsStayOnTop
+  OldCreateOrder = True
+  Position = poDesigned
+  Visible = True
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnResize = FormResize
+  FrameType = 5
+  Modified = False
+  Resizable = False
+  Undecorated = False
+  Background = clBtnFace
+  PixelsPerInch = 96
+  TextHeight = 13
+end
