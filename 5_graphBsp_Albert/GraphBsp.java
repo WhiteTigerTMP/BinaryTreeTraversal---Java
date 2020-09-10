@@ -1,0 +1,55 @@
+public class GraphBsp{
+  Graph g;
+  
+  public GraphBsp(){
+    g = new Graph();
+    
+    Vertex dor = new Vertex("Dortmund");
+    Vertex k = new Vertex("Koln");
+    Vertex d = new Vertex("Duesseldorf");
+    Vertex aa = new Vertex("Aachen");
+    Vertex bn = new Vertex("Bonn");
+    Vertex wu = new Vertex("Wuppertal");
+    Vertex e = new Vertex("Essen");
+    Vertex bo = new Vertex("Bochum");
+    Vertex du = new Vertex("Duisburg");
+  
+    g.addVertex(k);
+    g.addVertex(dor);
+    g.addVertex(aa);
+    g.addVertex(bn);
+    g.addVertex(wu);
+    g.addVertex(e);
+    g.addVertex(d);
+    g.addVertex(bo);
+    g.addVertex(du);
+    
+    g.addEdge(new Edge(k,d,1.0));
+    g.addEdge(new Edge(k,aa,1.0));
+    g.addEdge(new Edge(k,bn,1.0));
+    g.addEdge(new Edge(bn,aa,1.0));
+    g.addEdge(new Edge(bn,wu,1.0));
+    g.addEdge(new Edge(wu,d,1.0));
+    g.addEdge(new Edge(wu,k,1.0));
+    g.addEdge(new Edge(wu,e,1.0));
+    g.addEdge(new Edge(wu,dor,1.0));
+    g.addEdge(new Edge(do,bo,1.0));
+    g.addEdge(new Edge(bo,e,1.0));
+    g.addEdge(new Edge(e,du,1.0));
+    g.addEdge(new Edge(du, d, 1.0));
+    
+    List<Edge> lE = g.getEdges();
+    lE.toFirst();
+    
+    while (lE.hasAccess()) { 
+      Vertex[] v = lE.getContent().getVertices();
+      
+      lE.next();
+    } 
+  }
+  
+  public static void main(String[] args){
+    new GraphBsp();
+  }
+}
+  
