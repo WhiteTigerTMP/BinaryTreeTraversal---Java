@@ -4,7 +4,7 @@ public class GraphBsp{
   public GraphBsp(){
     g = new Graph();
     
-    Vertex do = new Vertex("Dortmund");
+    Vertex dor = new Vertex("Dortmund");
     Vertex k = new Vertex("Koln");
     Vertex d = new Vertex("Duesseldorf");
     Vertex aa = new Vertex("Aachen");
@@ -32,8 +32,8 @@ public class GraphBsp{
     g.addEdge(new Edge(wu,d,1.0));
     g.addEdge(new Edge(wu,k,1.0));
     g.addEdge(new Edge(wu,e,1.0));
-    g.addEdge(new Edge(wu,do,1.0));
-    g.addEdge(new Edge(do,bo,1.0));
+    g.addEdge(new Edge(wu,dor,1.0));
+    g.addEdge(new Edge(dor,bo,1.0));
     g.addEdge(new Edge(bo,e,1.0));
     g.addEdge(new Edge(e,du,1.0));
     g.addEdge(new Edge(du, d, 1.0));

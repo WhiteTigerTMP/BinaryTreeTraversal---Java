@@ -15,7 +15,7 @@ public class GraphBsp{
     Vertex du = new Vertex("Duisburg");
   
     g.addVertex(k);
-    g.addVertex(dor);
+    g.addVertex(d);
     g.addVertex(aa);
     g.addVertex(bn);
     g.addVertex(wu);
@@ -24,30 +24,34 @@ public class GraphBsp{
     g.addVertex(bo);
     g.addVertex(du);
     
-    g.addEdge(new Edge(k,d,1.0));
-    g.addEdge(new Edge(k,aa,1.0));
-    g.addEdge(new Edge(k,bn,1.0));
-    g.addEdge(new Edge(bn,aa,1.0));
-    g.addEdge(new Edge(bn,wu,1.0));
-    g.addEdge(new Edge(wu,d,1.0));
-    g.addEdge(new Edge(wu,k,1.0));
-    g.addEdge(new Edge(wu,e,1.0));
-    g.addEdge(new Edge(wu,dor,1.0));
-    g.addEdge(new Edge(do,bo,1.0));
-    g.addEdge(new Edge(bo,e,1.0));
-    g.addEdge(new Edge(e,du,1.0));
-    g.addEdge(new Edge(du, d, 1.0));
+    g.addEdge(new Edge(k,d,33.0));
+    g.addEdge(new Edge(k,aa,61.0));
+    g.addEdge(new Edge(k,bn,25.0));
+    g.addEdge(new Edge(bn,aa,71.0));
+    g.addEdge(new Edge(bn,wu,60.0));
+    g.addEdge(new Edge(wu,d,30.0));
+    g.addEdge(new Edge(wu,k,37.0));
+    g.addEdge(new Edge(wu,e,25.0));
+    g.addEdge(new Edge(wu,dor,33.0));
+    g.addEdge(new Edge(dor,bo,17.0));
+    g.addEdge(new Edge(bo,e,15.0));
+    g.addEdge(new Edge(e,du,17.0));
+    g.addEdge(new Edge(du, d,23.0));
     
     List<Edge> lE = g.getEdges();
     lE.toFirst();
-    
+                         
     while (lE.hasAccess()) { 
       Vertex[] v = lE.getContent().getVertices();
-      
+      System.out.println(v[1].getID());
       lE.next();
     } 
   }
   
+  public void getDistance(Vertex selectedCity){
+  
+  }
+
   public static void main(String[] args){
     new GraphBsp();
   }
